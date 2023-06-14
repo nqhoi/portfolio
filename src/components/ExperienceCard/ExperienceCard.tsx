@@ -24,8 +24,13 @@ export default function ExperienceCard() {
         </h4>
         <p className="font-bold text-2xl mt-1">Intern Front-end Developer</p>
         <div className="flex space-x-2 my-2 gap-2">
-          {MockSkillsFE.map((skill) => (
-            <img className="h-10 w-10 rounded-full" src={skill} alt="" />
+          {MockSkillsFE.map((skill, index) => (
+            <img
+              key={index}
+              className="h-10 w-10 rounded-full"
+              src={skill}
+              alt=""
+            />
           ))}
         </div>
 

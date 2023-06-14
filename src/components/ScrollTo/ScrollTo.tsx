@@ -18,17 +18,17 @@ function ScrollTo() {
   const controls = useAnimationControls();
   const [scrollY, setScrollY] = useState(0);
 
-  // useEffect(() => {
-  //   console.log(scrollYProgress);
-  //   return scrollYProgress.on("change", (latestValue) => {
-  //     console.log(latestValue);
-  //     if (latestValue > 0.5) {
-  //       controls.start("show");
-  //     } else {
-  //       controls.start("hide");
-  //     }
-  //   });
-  // });
+  useEffect(() => {
+    console.log(scrollYProgress);
+    return scrollYProgress.on("change", (latestValue) => {
+      console.log(latestValue);
+      if (latestValue > 0.5) {
+        controls.start("show");
+      } else {
+        controls.start("hide");
+      }
+    });
+  });
 
   useEffect(() => {
     const handleScroll = () => {

@@ -33,11 +33,11 @@ export default function Skills() {
       </h3>
 
       <div className="grid grid-cols-4 gap-4">
-        {MockSkillsFE.map((skill) => (
-          <Skill skill={skill} directionLeft={true} />
+        {MockSkillsFE.map((skill, index) => (
+          <Skill key={index} skill={skill} directionLeft={true} />
         ))}
-        {MockSkillsBE.map((skill) => (
-          <Skill skill={skill} />
+        {MockSkillsBE.map((skill, index) => (
+          <Skill key={index} skill={skill} />
         ))}
       </div>
     </div>
